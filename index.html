@@ -3,15 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=/prelaunch/terms.pdf">
-    <title>Redirecting...</title>
+    <title>FollowFunnel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+            min-height: 100vh;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px 80px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .hero-headline {
+            font-family: 'Inter', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-headline strong {
+            font-weight: 800;
+        }
+
+        .hero-subhead {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #666;
+            max-width: 540px;
+        }
+
+        .hero-form {
+            background: #F9F9F9;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            background: #fff;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #1E40AF;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 16px 24px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            background: #1E40AF;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            font-family: inherit;
+        }
+
+        .form-button:hover {
+            background: #1E3A8A;
+            transform: translateY(-1px);
+        }
+
+        .form-button:active {
+            transform: translateY(0);
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .feature-card {
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .feature-card.white {
+            background: #F9F9F9;
+        }
+
+        .feature-card.dark {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .feature-headline {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1a1a1a;
+            letter-spacing: -0.01em;
+        }
+
+        .feature-card.dark .feature-headline {
+            color: #ffffff;
+        }
+
+        .feature-content {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .feature-card.dark .feature-content {
+            color: #e0e0e0;
+        }
+
+        .feature-content strong {
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .feature-card.dark .feature-content strong {
+            color: #ffffff;
+        }
+
+        .feature-footnote {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #999;
+            margin-top: 8px;
+            font-style: italic;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+
+            .hero-headline {
+                font-size: 40px;
+                line-height: 1.15;
+            }
+
+            .hero-subhead {
+                font-size: 18px;
+            }
+
+            .hero-form {
+                padding: 30px 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                padding: 60px 20px;
+            }
+
+            .feature-card {
+                padding: 36px 24px;
+            }
+
+
+            .feature-headline {
+                font-size: 28px;
+            }
+
+            .feature-content {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <script>
-        // Immediate redirect
-        window.location.href = '/prelaunch/terms.pdf';
-    </script>
-    <p>If you are not redirected automatically, <a href="/prelaunch/terms.pdf">click here</a>.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-headline">Feeling frustrated that you keep <strong>accidentally abandoning</strong> your Zoom leads?</h1>
+            <p class="hero-subhead">Join the waitlist. Never forget another follow-up. Respond in minutes, not hours with the right message. Pre-separated attendee lists and customizable templates. Set it once and let it run.</p>
+        </div>
+        <div class="hero-form">
+            <form class="form-group">
+                <input type="email" class="form-input" placeholder="Enter your email" required>
+                <button type="submit" class="form-button">Get Early Access</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card white">
+            <h2 class="feature-headline">Speed matters.</h2>
+            <p class="feature-content">Respond within <strong>5 minutes</strong>: <strong>80% higher conversions</strong>. Wait 10 minutes: they've moved on. <strong>78% buy from whoever responds first</strong>.</p>
+            <p class="feature-footnote">Source: Harvard Business Review Lead Response Study</p>
+        </div>
+        <div class="feature-card white">
+            <h2 class="feature-headline">Consistency wins.</h2>
+            <p class="feature-content"><strong>25% of webinar sales happen in follow-ups</strong>. But 60% of leads never get contacted. Follow up every time, win by default.</p>
+            <p class="feature-footnote">Source: WebinarCare, 2023</p>
+        </div>
+        <div class="feature-card white">
+            <h2 class="feature-headline">On-message = trust.</h2>
+            <p class="feature-content">Attendees need different messages than no-shows. Send the same email to both? You look careless. <strong>Personalized follow-ups drive loyalty</strong>.</p>
+            <p class="feature-footnote">Source: McKinsey & Company Research</p>
+        </div>
+        <div class="feature-card dark">
+            <h2 class="feature-headline">You know you should. FollowFunnel makes sure you can.</h2>
+            <p class="feature-content">Pre-sorted lists. Customizable templates. Send in minutes after every Zoom.</p>
+        </div>
+    </section>
 </body>
 </html>
 

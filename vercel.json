@@ -3,7 +3,13 @@
     {
       "source": "/",
       "destination": "/prelaunch/terms.pdf",
-      "permanent": false
+      "permanent": false,
+      "has": [
+        {
+          "type": "host",
+          "value": "followfunnel.app"
+        }
+      ]
     }
   ]
 }
