@@ -1,0 +1,9 @@
+# Redirect root to terms.pdf
+RewriteEngine On
+RewriteRule ^$ /prelaunch/terms.pdf [R=302,L]
+
+# Optional: Redirect www to non-www (or vice versa)
+# Uncomment and modify as needed:
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
