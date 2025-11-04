@@ -6,7 +6,7 @@
     <title>FollowFunnel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -53,7 +53,7 @@
 
         .hero-subhead {
             font-family: 'Inter', sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 400;
             line-height: 1.6;
             color: #666;
@@ -65,6 +65,51 @@
             border-radius: 16px;
             padding: 40px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .hero-form form,
+        .hero-form iframe {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* Kit form styling - ensure inputs are visible and styled */
+        .hero-form input[type="email"],
+        .hero-form input[type="text"],
+        .hero-form input[type="tel"],
+        .hero-form .kit-form input,
+        .hero-form form input,
+        .hero-form [data-kit-form] input {
+            width: 100% !important;
+            padding: 16px 20px !important;
+            font-size: 16px !important;
+            border: 2px solid #e0e0e0 !important;
+            border-radius: 12px !important;
+            background: #fff !important;
+            margin-bottom: 16px !important;
+            box-sizing: border-box !important;
+            font-family: inherit !important;
+            display: block !important;
+            min-height: 48px !important;
+        }
+
+        .hero-form input[type="email"]:focus,
+        .hero-form input[type="text"]:focus,
+        .hero-form input[type="tel"]:focus,
+        .hero-form .kit-form input:focus,
+        .hero-form form input:focus,
+        .hero-form [data-kit-form] input:focus {
+            outline: none !important;
+            border-color: #1E40AF !important;
+        }
+
+        .hero-form .kit-form,
+        .hero-form form,
+        .hero-form [data-kit-form] {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+            width: 100% !important;
         }
 
         .form-group {
@@ -179,6 +224,107 @@
             text-align: right;
         }
 
+        .how-it-works {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 40px;
+            text-align: center;
+        }
+
+        .how-it-works-heading {
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+            letter-spacing: -0.02em;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: left;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+
+        .step-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1E40AF;
+            min-width: 32px;
+        }
+
+        .step-title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #1a1a1a;
+        }
+
+        .step-description {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #666;
+            margin-left: 48px;
+        }
+
+        .closing-statement {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.5;
+            color: #666;
+            margin-top: 60px;
+            margin-bottom: 32px;
+        }
+
+        .how-it-works-cta {
+            margin-top: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 48px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            background: #1E40AF;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background: #1E3A8A;
+            transform: translateY(-1px);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             .hero {
                 grid-template-columns: 1fr;
@@ -216,6 +362,45 @@
             .feature-content {
                 font-size: 16px;
             }
+
+            .how-it-works {
+                padding: 60px 20px;
+            }
+
+            .how-it-works-heading {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+
+            .steps {
+                gap: 32px;
+                margin-bottom: 40px;
+                max-width: 100%;
+            }
+
+            .step-header {
+                gap: 12px;
+            }
+
+            .step-number {
+                font-size: 20px;
+                min-width: 28px;
+            }
+
+            .step-title {
+                font-size: 20px;
+            }
+
+            .step-description {
+                font-size: 16px;
+                margin-left: 40px;
+            }
+
+            .closing-statement {
+                font-size: 20px;
+                margin-top: 40px;
+                margin-bottom: 24px;
+            }
         }
     </style>
 </head>
@@ -226,10 +411,7 @@
             <p class="hero-subhead">Join the waitlist. Never forget another follow-up. Respond in minutes, not hours with the right message. Pre-separated attendee lists and customizable templates. Set it once and let it run.</p>
         </div>
         <div class="hero-form">
-            <form class="form-group">
-                <input type="email" class="form-input" placeholder="Enter your email" required>
-                <button type="submit" class="form-button">Get Early Access</button>
-            </form>
+            <iframe src="https://app.greysolve.com/form/b4488b3e-0183-4eb0-acf1-b7b2fd704b75" width="100%" height="500" frameborder="0" style="border: none; border-radius: 12px;"></iframe>
         </div>
     </section>
 
@@ -252,6 +434,37 @@
         <div class="feature-card dark">
             <h2 class="feature-headline">You know you should. FollowFunnel makes sure you can.</h2>
             <p class="feature-content">Pre-sorted lists. Customizable templates. Send in minutes after every Zoom.</p>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2 class="how-it-works-heading">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Connect once</div>
+                </div>
+                <div class="step-description">Link your Zoom and email (Gmail, Outlook, or IMAP). Takes 2 minutes.</div>
+            </div>
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Set up templates</div>
+                </div>
+                <div class="step-description">Templates for: thank you notes, offers, recording links. Customize for attendees vs. no-shows. Do this once.</div>
+            </div>
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Send in minutes</div>
+                </div>
+                <div class="step-description">After each Zoom, your lists are ready. Review and send. That's it.</div>
+            </div>
+        </div>
+        <p class="closing-statement">Stop losing leads you already earned,<br>and trust you've already built.</p>
+        <div class="how-it-works-cta">
+            <a href="#hero" class="cta-button">Join the Waitlist</a>
         </div>
     </section>
 </body>
